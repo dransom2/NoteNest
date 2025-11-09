@@ -53,7 +53,7 @@
   <div class="wrap">
 
     <!-- ===== Login Page ===== -->
-    <section id="login" class="section">
+   <!--<section id="login" class="section">
       <h1 class="center" style="color:#4f46e5;">📘 NoteNest</h1>
       <h2>Login</h2>
       <p class="muted">Please sign in with your TWU email.</p>
@@ -63,7 +63,7 @@
         <input id="email" name="email" type="email" required="" placeholder="your.name@twu.edu" pattern="^[^@\s]+@([a-zA-Z0-9-]+\.)*twu\.edu$">
         <button type="submit" class="btn">Continue</button>
       </form>
-    </section>
+    </section>-->
 
     <!-- ===== Landing ===== -->
     <section id="landing" class="section">
@@ -266,4 +266,15 @@
   </div>
 
 
-<div id="quick-start-container"></div></body></html>
+<div id="quick-start-container">
+
+</div>
+ <script>
+    const userEmail = localStorage.getItem('userEmail');
+    if (!userEmail) {
+      // If the user hasn't logged in, send them back to login.html
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
