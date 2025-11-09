@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/novenest.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="emotion-insertion-point" content="">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NoteNest</title>
+
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="styles.css">
+<!-- Code injected by Five-server -->
+  <script async="" data-id="five-server" data-file=".NoteNest\styles.css" type="application/javascript" src="./NoteNest_files/fiveserver.js"></script>
+  <style>      
+      /* Injected by five-server */
+      /*[data-highlight="true"] {
+        border: 1px rgb(90,170,255) solid !important;
+        background-color: rgba(155,215,255,0.5);
+        animation: fadeOutHighlight 1s forwards 0.5s;
+      }
+      img[data-highlight="true"] {
+        filter: sepia(100%) hue-rotate(180deg) saturate(200%);
+        animation: fadeOutHighlightIMG 0.5s forwards 0.5s;
+      }*/
+      @keyframes fadeOutHighlight {
+        from {background-color: rgba(155,215,255,0.5);}
+        to {background-color: rgba(155,215,255,0);}
+      }      
+      @keyframes fadeOutHighlightIMG {
+        0% {filter: sepia(100%) hue-rotate(180deg) saturate(200%);}
+        33% {filter: sepia(66%) hue-rotate(180deg) saturate(100%);}
+        50% {filter: sepia(50%) hue-rotate(90deg) saturate(50%);}
+        66% {filter: sepia(33%) hue-rotate(0deg) saturate(100%);}
+        100% {filter: sepia(0%) hue-rotate(0deg) saturate(100%);}
+      }
+      @keyframes fiveserverInfoPopup {
+        0%   {top:-40px;}
+        15%  {top:4px;}
+        85%  {top:4px;}
+        100% {top:-40px;}
+      }
+      /*smaller*/
+      @media (max-width: 640px) {
+        #fiveserver-info-wrapper {
+          max-width: 98%;
+        }
+        #fiveserver-info {
+          border-radius: 0px;
+        }      
+      }
+
+      </style></head>
+<body>
+
+  <div class="wrap">
+
+    <!-- ===== Login Page ===== -->
+    <section id="login" class="section">
+      <h1 class="center" style="color:#4f46e5;">📘 NoteNest</h1>
+      <h2>Login</h2>
+      <p class="muted">Please sign in with your TWU email.</p>
+
+      <form action="http://127.0.0.1:5500/novenest.html#landing" method="get" class="box" novalidate="">
+        <label for="email"><strong>Email</strong></label>
+        <input id="email" name="email" type="email" required="" placeholder="your.name@twu.edu" pattern="^[^@\s]+@([a-zA-Z0-9-]+\.)*twu\.edu$">
+        <button type="submit" class="btn">Continue</button>
+      </form>
+    </section>
+
+    <!-- ===== Landing ===== -->
+    <section id="landing" class="section">
+      <h1 class="center" style="color:#4f46e5;">📘 NoteNest</h1>
+      <h1 class="center">Empowering education through interactive learning and assessment</h1>
+      <p class="center muted">Choose a portal to continue</p>
+      <div class="grid2">
+        <div class="box">
+          <h2>Student Portal</h2>
+          <p class="muted">Access quizzes, upload documents, and track your progress.</p>
+          <div class="box"><span class="dot green"></span> Take interactive quizzes</div>
+          <div class="box"><span class="dot blue"></span> Upload study materials</div>
+          <div class="box"><span class="dot blue"></span> View your grades and progress</div>
+          <p><a class="btn" href="http://127.0.0.1:5500/novenest.html#student">Go to Student Dashboard</a></p>
+        </div>
+        <div class="box">
+          <h2>Teacher Portal</h2>
+          <p class="muted">Manage students, create quizzes, and track class performance.</p>
+          <div class="box"><span class="dot purple"></span> View all student grades</div>
+          <div class="box"><span class="dot orange"></span> Comment on student progress</div>
+          <div class="box"><span class="dot green"></span> Manage class analytics</div>
+          <p><a class="btn dark" href="http://127.0.0.1:5500/novenest.html#teacher">Go to Teacher Dashboard</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Student Dashboard ===== -->
+    <section id="student" class="section">
+      <h1 class="center" style="color:#4f46e5;">📘 NoteNest</h1>
+      <h2 class="center">Student Dashboard</h2>
+      <p class="center muted">What would you like to do?</p>
+
+      <div class="grid2">
+        <div class="box">
+          <h3>Take a Quiz</h3>
+          <p class="muted">Test your knowledge with instant feedback.</p>
+          <div class="box" style="display:flex; justify-content:space-between"><strong>quiz-1</strong> <span class="muted">15 questions</span></div>
+          <div class="box" style="display:flex; justify-content:space-between"><strong>quiz-2</strong> <span class="muted">20 questions</span></div>
+          <div class="box" style="display:flex; justify-content:space-between"><strong>quiz-3</strong> <span class="muted">12 questions</span></div>
+          <p><a class="btn" href="http://127.0.0.1:5500/novenest.html#quiz">Start Taking Quiz</a></p>
+        </div>
+
+        <div class="box">
+          <h3>Upload Or View Chapter or Document</h3>
+          <p class="muted">Share notes, assignments, or images.</p>
+          <div class="box">📄 PDF Documents</div>
+          <p>
+            <a class="btn" href="http://127.0.0.1:5500/novenest.html#pdfs">Upload</a>
+            <a class="btn" href="http://127.0.0.1:5500/novenest.html#pdfs">View PDFs</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Student PDFs (viewer) ===== -->
+    <section id="pdfs" class="section">
+      <h1 class="center" style="color:#4f46e5;">📘 NoteNest</h1>
+      <h2 class="center">My PDF Library</h2>
+      <p class="center muted">Upload PDFs and preview them in your browser. Files stay on your device.</p>
+
+      <div class="box">
+        <label for="pdfInput"><strong>Select PDF files</strong></label>
+        <input id="pdfInput" type="file" accept="application/pdf" multiple="">
+      </div>
+
+      <div id="pdfList" class="grid2"></div>
+
+      <div id="pdfViewer" class="box" style="margin-top:16px; height:70vh">
+        <iframe id="pdfFrame" title="PDF viewer" style="width:100%; height:100%; border:0" src="./NoteNest_files/saved_resource.html"></iframe>
+      </div>
+
+      <p style="margin-top:8px">
+        <a class="btn" href="http://127.0.0.1:5500/novenest.html#student">Go to Student Dashboard</a>
+      </p>
+    </section>
+
+    <!-- ===== Quiz ===== -->
+    <section id="quiz" class="section">
+      <h1 class="center" style="color:#4f46e5;">📘 NoteNest</h1>
+      <h2>Quiz: History of Ancient Rome</h2>
+      <p class="muted">Question 3/10</p>
+      <div class="progress" style="margin:10px 0 16px"><span style="width:30%"></span></div>
+      <p><strong>A large and complex problem may be simplified via _____________ and decomposition.</strong></p>
+      <div class="box">◻️ Separation</div>
+      <div class="box">◻️ Coupling</div>
+      <div class="box">◻️ Consistency</div>
+      <div class="box">◻️ Testing</div>
+      <p>
+        <a class="btn" href="http://127.0.0.1:5500/novenest.html#results">Next</a>
+        <a class="btn" style="background:#fff; color:#222; border:1px solid #e3e3e3" href="http://127.0.0.1:5500/novenest.html#quiz">Previous</a>
+      </p>
+      <p style="margin-top:8px">
+        <a class="btn" href="http://127.0.0.1:5500/novenest.html#student">Go to Student Dashboard</a>
+      </p>
+    </section>
+
+    <!-- ===== Results ===== -->
+    <section id="results" class="section">
+      <h1 class="center" style="color:#4f46e5;">📘 NoteNest</h1>
+      <h2>🎓 Quiz Results</h2>
+      <div class="grid2">
+        <div class="box">
+          <p class="muted">Final Grade</p>
+          <div style="display:flex; align-items:center; gap:16px">
+            <div class="box" style="width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold">B</div>
+            <div>
+              <strong>72/100 Points</strong> <span class="muted">(72% Score)</span>
+              <div class="muted">Passed</div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <p class="muted">Performance Breakdown</p>
+          <p>✅ 18 Correct</p>
+          <p>❌ 7 Incorrect</p>
+          <p>⏱️ 12 minutes</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <p class="muted">Question-by-Question Breakdown</p>
+        <div class="box" style="display:flex; justify-content:space-between"><span>1) A large and complex problem may be simplified via _____________ and decomposition</span><strong>+4 pts ✅</strong></div>
+        <div class="box" style="display:flex; justify-content:space-between"><span>2) Coupling is defined as an attribute that specifies the interdependence between two software units</span><strong>+4 pts ✅</strong></div>
+        <div class="box" style="display:flex; justify-content:space-between"><span>3) (True or False) The architectural design was the main concern in the early days of software engineering.</span><strong>-4 pts ❌</strong></div>
+        <div class="box" style="display:flex; justify-content:space-between"><span>4) Usability testing is performed in the ________________ phase.</span><strong>+4 pts ✅</strong></div>
+        <div class="box" style="display:flex; justify-content:space-between"><span>5) The notion of simplicity may be measured by the following characteristics:</span><strong>-4 pts ❌</strong></div>
+        <div style="text-align:right"><strong>Total Score: 72/100</strong></div>
+      </div>
+
+      <p>
+        <a class="btn" href="http://127.0.0.1:5500/novenest.html#quiz">Retake Quiz</a>
+        <a class="btn" href="http://127.0.0.1:5500/novenest.html#student">Continue Course</a>
+      </p>
+
+      <p style="margin-top:8px">
+        <a class="btn" href="http://127.0.0.1:5500/novenest.html#student">Go to Student Dashboard</a>
+      </p>
+    </section>
+
+    <!-- ===== Teacher Dashboard ===== -->
+    <section id="teacher" class="section">
+      <h1 class="center" style="color:#4f46e5;">📘 NoteNest</h1>
+      <h2 class="center">Teacher Dashboard</h2>
+      <p class="center muted">Manage students and track progress</p>
+
+      <div class="grid2">
+        <div class="box"><strong>Total Students:</strong> 4</div>
+        <div class="box"><strong>Class Average:</strong> 81%</div>
+        <div class="box"><strong>Quizzes Completed:</strong> 53</div>
+        <div class="box"><strong>Active Today:</strong> 2</div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="box">
+            <h3>Student Performance</h3>
+            <div class="box">
+              <div style="display:flex; justify-content:space-between"><strong>student 1</strong><span class="muted">92% avg</span></div>
+              <div class="progress"><span style="width:85%"></span></div>
+            </div>
+            <div class="box">
+              <div style="display:flex; justify-content:space-between"><strong>student 2</strong><span class="muted">78% avg</span></div>
+              <div class="progress"><span style="width:72%"></span></div>
+            </div>
+            <div class="box">
+              <div style="display:flex; justify-content:space-between"><strong>student 3</strong><span class="muted">88% avg</span></div>
+              <div class="progress"><span style="width:90%"></span></div>
+            </div>
+            <div class="box">
+              <div style="display:flex; justify-content:space-between"><strong>student 4</strong><span class="muted">65% avg</span></div>
+              <div class="progress"><span style="width:45%"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="box">
+            <h3>Student Details</h3>
+            <p><strong>Average Score:</strong> 92%</p>
+            <p><strong>Quizzes Done:</strong> 15</p>
+            <h4>Comments</h4>
+            <ul class="muted">
+              <li>Excellent work on algebra concepts!</li>
+              <li>Shows great improvement in problem-solving.</li>
+            </ul>
+            <div class="box">
+              <p class="muted">Add Comment (mock)</p>
+              <div class="box" style="height:70px; background:#fafafa">Write here...</div>
+              <p><a class="btn" href="http://127.0.0.1:5500/novenest.html#teacher">Save</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:8px">
+        <a class="btn dark" href="http://127.0.0.1:5500/novenest.html#teacher">Go to Teacher Dashboard</a>
+      </p>
+    </section>
+
+  </div>
+
+
+<div id="quick-start-container"></div></body></html>
