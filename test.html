@@ -269,12 +269,13 @@
 <div id="quick-start-container">
 
 </div>
- <script>
-    const userEmail = localStorage.getItem('userEmail');
-    if (!userEmail) {
-      // If the user hasn't logged in, send them back to login.html
-      window.location.href = "login.html";
-    }
-  </script>
+<<script>
+  const userEmail = localStorage.getItem('userEmail');
+  if (!userEmail) {
+    window.location.href = "index.html";//send back to login if not logged in
+  }
+</script>
+<a class="btn dark" href="index.html" onclick="localStorage.removeItem('userEmail')">Logout</a>
+
 </body>
 </html>
